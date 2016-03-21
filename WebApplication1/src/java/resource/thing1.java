@@ -60,4 +60,17 @@ public class thing1 {
         System.out.println("resource.thing1.putJson()");
         System.out.println("content: " + content);
     }
+    
+    /**
+     * Retrieves representation of an instance of resource.thing1
+     * @return an instance of java.lang.String
+     */
+    @GET
+    @Path("/model")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getModelJson() {
+        //TODO return proper representation object
+        System.out.println("resource.thing1.getModelJson()");
+        return gson.toJson("Raspbery Pi 2");
+    }
 }
